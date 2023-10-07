@@ -23,7 +23,7 @@ const AddBlogs = () => {
   };
   const sendRequest = async () => {
     const res = await axios
-      .post("http://localhost:5000/api/blogs/add", {
+      .post("http://13.51.199.154:5000/api/blogs/add", {
         title: inputs.title,
         desc: inputs.description,
         img: inputs.imageURL,
