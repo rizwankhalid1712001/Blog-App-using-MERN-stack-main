@@ -27,7 +27,7 @@ const Blogs = ({ title, desc, img, user, isUser, id }) => {
 
   const deleteRequest = async () => {
     const res = await axios
-      .delete(`http://localhost:5000/api/blogs/${id}`)
+      .delete(`http://13.51.199.154:5000/api/blogs/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;

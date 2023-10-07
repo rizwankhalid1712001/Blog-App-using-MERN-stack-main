@@ -27,7 +27,7 @@ function CommentSection() {
 
   const fetchComments = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/comments/${id}`);
+      const response = await axios.get(`http://13.51.199.154:5000/api/comments/${id}`);
       setComments(response.data);
     } catch (error) {
       console.error("Error fetching comments:", error);
@@ -41,7 +41,7 @@ function CommentSection() {
       blog: id,
     };
     try {
-      await axios.post("http://localhost:5000/api/comments", commentObj);
+      await axios.post("http://13.51.199.154:5000/api/comments", commentObj);
       setCommentText("");
       fetchComments();
     } catch (error) {
@@ -51,7 +51,7 @@ function CommentSection() {
 
   const handleDeleteComment = async (commentId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/comments/${commentId}`);
+      await axios.delete(`http://13.51.199.154:5000/api/comments/${commentId}`);
       fetchComments();
     } catch (error) {
       console.error("Error deleting comment:", error);

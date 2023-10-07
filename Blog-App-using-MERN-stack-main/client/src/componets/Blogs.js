@@ -8,7 +8,7 @@ const Blogs = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .get("http://localhost:5000/api/blogs")
+      .get("http://13.51.199.154:5000/api/blogs")
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
